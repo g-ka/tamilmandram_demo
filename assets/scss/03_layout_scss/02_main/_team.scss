@@ -1,0 +1,272 @@
+@use "../../01_abstract_scss/abstract";
+@use "../../01_abstract_scss/media_queries_mix" as mq;
+@use "../../01_abstract_scss/reverse_events" as reverse_content;
+
+.team{
+  height: 82.5vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+
+  .intro_quote{
+    font-family: 'Poppins', sans-serif;
+    font-size: 80px;
+    font-weight: 800;
+    line-height: 1.5;
+    transition: filter 3s 4000ms, opacity 3s 4000ms;
+    pointer-events: none;
+    position: absolute;
+    z-index: -2;
+    color: var(--text1);
+
+    .divided{
+      text-transform: uppercase;
+      transition: opacity 1.5s 500ms, letter-spacing 1.5s 500ms;
+    }
+    .by_teams{
+      transition: opacity 1s 1500ms;
+    }
+    .united{
+      transition: opacity ease-in-out 2s 2000ms, margin-left ease-in-out 2s 2000ms, letter-spacing ease-in-out 2s 2000ms;
+
+      .nit{
+        background-color: var(--secondary);
+        text-transform: uppercase;
+        border: 3px solid var(--nit_border_color);
+        border-radius: 5px;
+
+        .t{
+          text-transform: lowercase;
+          color: var(--text2);
+          text-shadow: 7px 7px 0 black;
+        }
+      }
+    }
+    .by{
+      transition: opacity 1s 3000ms;
+    }
+    .thamizh{
+      transition: opacity 1s 3200ms;
+
+      .zh{
+        color: var(--zh);
+        background-color: var(--zh_bg);
+      }
+    }
+
+    @include mq.responsive('lg')
+    {
+      display: none;
+    }
+  }
+
+  .tamilmandram_team{
+    display: flex;
+    align-items: center;
+    column-gap: 6.5rem;
+    font-family: 'Poppins', sans-serif;
+    pointer-events: none;
+    transition: filter 3s 4000ms, opacity 3s 4000ms;
+
+    @include mq.responsive('xl')
+    {
+      flex-direction: column;
+      row-gap: 3rem;
+    }
+    @include mq.responsive('lg')
+    {
+      transition: filter 1s, opacity 1s;
+      flex-direction: column;
+      row-gap: 3rem;
+    }
+
+    &__display{
+      display: flex;
+      row-gap: 1.5rem;
+      align-items: center;
+      flex-direction: column;
+
+      &__title{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        column-gap: 1.5rem;
+        font-size: 3rem;
+        color: var(--team_title_color);
+        font-weight: 600;
+        text-shadow: 6px 6px 0 var(--team_title_shadow);
+
+        @include mq.responsive('md')
+        {
+          font-size: 1.8rem;
+          text-shadow: 3px 3px 0 var(--team_title_shadow);
+          column-gap: 0.7rem;
+        }
+
+        i{
+          border: none;
+          border-radius: 30px;
+          transition: background-color 0.5s, color 0.5s, opacity 1.5s;
+          cursor: pointer;
+        }
+        i:hover{
+          background-color: var(--team_i_hover);
+          color: var(--team_i);
+        }
+        .left_team{
+          opacity: 0;
+          pointer-events: none;
+        }
+
+        .team_name{
+          display: inline-flex;
+          align-items: center;
+          width: 16.3rem;
+          overflow-x: hidden;
+          column-gap: 1rem;
+          transition: width ease-in-out 1.5s;
+          pointer-events: none;
+
+          .team1{
+            transition: margin-left ease-in-out 1.5s;
+            white-space: nowrap;
+          }
+          
+          .team3,.team5{
+            white-space: nowrap;
+          }
+          
+        }
+      }
+
+      &__images{
+        display: flex;
+        align-items: center;
+        column-gap: 1.5rem;
+
+        @include mq.responsive('sm')
+        {
+          display: none;
+        }
+
+        .tm_images{
+          width: 31rem;
+          display: flex;
+          align-items: center;
+          column-gap: 2rem;
+          overflow-x: hidden;
+          border: none;
+          border-radius: 1.25rem;
+
+          .set_of_four{
+            width: 31rem;
+            display: flex;
+            align-items: center;
+            column-gap: 2rem;
+            transition: margin-left ease-in-out 1.5s;
+
+            img{
+              width: 100px;
+              aspect-ratio: 1/1;
+              border: none;
+              border-radius: 1.25rem;
+              object-fit: cover;
+              object-position: center top;
+              cursor: pointer;
+            }
+
+            .fake{
+              opacity: 0;
+              pointer-events: none;
+            }
+          }
+        }
+
+        i{
+          font-size: 1.2rem;
+          cursor: pointer;
+          transition: opacity 1.5s;
+          color: var(--text3);
+        }
+        .left_icon{
+          opacity: 0;
+          pointer-events: none;
+        }
+      }
+    }  
+
+    &__desc{
+      width: 450px;
+      line-height: 1.6;
+      color: var(--text3);
+      transition: all 1s;
+      text-align: center;
+      pointer-events: none;
+
+      @include mq.responsive('sm')
+      {
+        width: 300px;
+      }
+
+      h1,h2,h3{
+        pointer-events: none;
+      }
+
+      h1{
+        background: linear-gradient(to right, var(--primary), var(--secondary));
+        -webkit-background-clip: text;
+        background-clip: text;
+        -webkit-text-fill-color: transparent;
+      }
+      h2,h3{
+        color: var(--text3);
+      }
+
+      .h1_p{
+        font-weight: bold;
+        font-size: 1.8rem;
+        background: linear-gradient(to right, var(--primary), var(--secondary));
+        -webkit-background-clip: text;
+        background-clip: text;
+        -webkit-text-fill-color: transparent;
+      }
+
+      .h2_p{
+        font-weight: bold;
+        font-size: 1.3rem;
+        color: var(--text3);
+      }
+
+      .h3_p{
+        font-weight: bold;
+        font-size: 1.1rem;
+        color: var(--text3);
+      }
+
+      .profile_handles{
+
+        a{
+          text-decoration: none;
+          color: var(--text3);
+
+          i{
+            font-size: 1.5rem;
+            cursor: pointer;
+            transition: color 0.2s;
+            pointer-events: all;
+          }
+          i:hover{
+            color: var(--profile_handle);
+          }
+        }
+      }
+    }
+    .font_adder{
+      font-size: 1.1rem;
+      font-weight: 500;
+      font-family: 'Poppins', sans-serif;
+    }
+  }
+}
+

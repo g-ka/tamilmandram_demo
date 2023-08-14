@@ -1,0 +1,244 @@
+@use "../../01_abstract_scss/abstract";
+@use "../../01_abstract_scss/media_queries_mix" as mq;
+
+.home{
+  display: flex;
+  align-items: center;
+  column-gap: 5rem;
+  height: 82vh;
+  padding: 3rem 8rem;
+
+  @include mq.responsive('xl')
+  {
+    flex-direction: column;
+    padding: 3rem 5rem;
+    row-gap: 3rem;
+  }
+  @include mq.responsive('lg')
+  {
+    flex-direction: column;
+    padding: 3rem 4rem;
+    row-gap: 3rem;
+  }
+  @include mq.responsive('md')
+  {
+    flex-direction: column;
+    padding: 2rem 4rem;
+    row-gap: 3rem;
+  }
+  @include mq.responsive('sm')
+  {
+    flex-direction: column;
+    padding: 2rem 3rem;
+    row-gap: 2rem;
+  }
+  @include mq.responsive('xs')
+  {
+    flex-direction: column;
+    padding: 2rem 3rem;
+    row-gap: 2rem;
+  }
+
+  &__paragraph{
+    display: flex;
+    flex-direction: column;
+    row-gap: 2rem;
+    justify-content: center;
+    font-family: 'Noto Sans Tamil', sans-serif;
+
+    &__quote{
+      font-size: 2rem;
+      font-weight: 700;
+      color: var(--text1);
+      line-height: 1.6;
+      pointer-events: none;
+      transition: opacity 1s 0s, transform 1s 0s;
+
+      @include mq.responsive('xl')
+      {
+        transition: opacity 1.5s 100ms, transform 1.5s 100ms;
+      }
+      @include mq.responsive('lg')
+      {
+        transition: opacity 1.5s 100ms, transform 1.5s 100ms;
+      }
+      @include mq.responsive('md')
+      {
+        transition: opacity 1.5s 100ms, transform 1.5s 100ms;
+      }
+      @include mq.responsive('sm')
+      {
+        transition: opacity 1.5s 100ms, transform 1.5s 100ms;
+      }
+      @include mq.responsive('xs')
+      {
+        font-size: 1.6rem;
+        transition: opacity 1.5s 100ms, transform 1.5s 100ms;
+      }
+    }
+
+    &__desc{
+      font-size: 1.1rem;
+      font-weight: 400;
+      color: var(--text3);
+      line-height: 1.6;
+      pointer-events: none;
+      transition: opacity 1s 0.3s, transform 1s 0.3s;
+
+      @include mq.responsive('xl')
+      {
+        transition: opacity 1.5s 200ms, transform 1.5s 200ms;
+      }
+      @include mq.responsive('lg')
+      {
+        transition: opacity 1.5s 200ms, transform 1.5s 200ms;
+      }
+      @include mq.responsive('md')
+      {
+        transition: opacity 1.5s 200ms, transform 1.5s 200ms;
+      }
+      @include mq.responsive('sm')
+      {
+        transition: opacity 1.5s 200ms, transform 1.5s 200ms;
+      }
+      @include mq.responsive('xs')
+      {
+        font-size: 1rem;
+        transition: opacity 1.5s, transform 1.5s;
+      }
+    }
+
+    &__buttons{
+      display: flex;
+      width: 100%;
+      align-items: center;
+      transition: opacity 1s 0.6s, transform 1s 0.6s;
+
+      @include mq.responsive('xl')
+      {
+        transition: opacity 1.5s 300ms, transform 1.5s 300ms;
+      }
+      @include mq.responsive('lg')
+      {
+        transition: opacity 1.5s 300ms, transform 1.5s 300ms;
+      }
+      @include mq.responsive('md')
+      {
+        transition: opacity 1.5s 300ms, transform 1.5s 300ms;
+      }
+      @include mq.responsive('sm')
+      {
+        transition: opacity 1.5s 300ms, transform 1.5s 300ms;
+      }
+      @include mq.responsive('xs')
+      {
+        transition: opacity 1.5s, transform 1.5s;
+      }
+
+      .hover_styles_translate{
+        font-family: 'Poppins', sans-serif;
+        font-size: 1.2rem;
+        font-weight: 600;
+        padding: 0.4rem 0.6rem;
+        color: var(--primary);
+        border: none;
+        border-radius: 0.5rem;
+        margin-right: 1.25rem;
+        box-shadow: 0px 3px 2px var(--shadow1);
+        cursor: pointer;
+      }
+      .hover_styles_translate:active{
+        margin: 3px 1.25rem 0 0;
+        box-shadow: 0 0 0;
+      }
+
+      .hover_styles_mode{
+        border: none;
+        border-radius: 0.5rem;
+        box-shadow: 0px 3px 2px var(--shadow1);
+        cursor: pointer;
+        background-color: var(--mode_bg);
+        padding: 0.25rem 0.3rem;
+
+        .home__paragraph__buttons__mode__dark_light{
+          width: 2rem;
+        }
+      }
+      .hover_styles_mode:active{
+        margin: 3px 0 0 0;
+        box-shadow: 0 0 0;
+      }
+
+      &__translate{
+        transition: margin 0.1s, box-shadow 0.1s;
+      }
+      &__mode{
+        transition: margin 0.1s, box-shadow 0.1s;
+      }
+    }
+  }
+
+  &__image{
+
+    &__tm
+    {
+      width: 22.5rem;
+      background-color: var(--text2);
+      border: 8px solid var(--blob_border);
+      border-radius: 47% 53% 24% 80% / 70% 9% 91% 30%;
+      animation: blob ease-in-out 25s infinite;
+      cursor: pointer;
+      transition: opacity 1s 0.3s, transform 1s 0.3s;
+
+      @include mq.responsive('xl')
+      {
+        width: 21.5rem;
+        margin-bottom: 3rem;
+        transition: opacity 1.5s, transform 1.5s;
+      }
+      @include mq.responsive('lg')
+      {
+        width: 21rem;
+        margin-bottom: 3rem;
+        transition: opacity 1.5s, transform 1.5s;
+      }
+      @include mq.responsive('md')
+      {
+        width: 20rem;
+        margin-bottom: 3rem;
+        transition: opacity 1.5s, transform 1.5s;
+      }
+      @include mq.responsive('sm')
+      {
+        width: 19rem;
+        margin-bottom: 2.5rem;
+        transition: opacity 1.5s, transform 1.5s;
+      }
+      @include mq.responsive('xs')
+      {
+        width: 17rem;
+        margin-bottom: 2.5rem;
+        transition: opacity 1.5s, transform 1.5s;
+      }
+    }
+    @keyframes blob
+    {
+      0%{border-radius: 47% 53% 24% 80% / 70% 9% 91% 30%;}
+      25%{border-radius: 57% 44% 37% 88% / 48% 76% 27% 51%;}
+      50%{border-radius: 70% 46% 31% 100% / 32% 56% 56% 95%;}
+      75%{border-radius: 82% 85% 37% 65% / 75% 71% 91% 93% ;}
+      100%{border-radius: 47% 53% 24% 80% / 70% 9% 91% 30%;}
+    }
+    @keyframes glow
+    {
+      0%{box-shadow: 0 0 0;}
+      50%{box-shadow: 0 0 5px var(--primary),
+                     0 0 10px var(--secondary),
+                     0 0 20px var(--primary),
+                     0 0 30px var(--secondary),
+                     0 0 40px var(--primary),
+                     0 0 50px var(--primary);}
+      100%{box-shadow: 0 0 0;}
+    }
+  }
+}

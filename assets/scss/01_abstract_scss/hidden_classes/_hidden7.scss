@@ -1,0 +1,9 @@
+.hidden7{
+  filter: blur(0);
+  opacity: 1;
+}
+
+.show7{
+  opacity: 0;
+  filter: blur(10px);
+}

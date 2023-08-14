@@ -1,0 +1,71 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+Tamil:wght@100;200;300;400;500;600;700;800;900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap');
+
+:root{
+  --primary: #f15b22;
+  --secondary: #f3ca34;
+  
+  --text1: #2d2e32;
+  --text2: white;
+  --text3: #555;
+
+  --blob_border: #2d2e32;
+
+  --shadow1: rgba(0,0,0,0.5);
+  --shadow2: rgba(132, 132, 132, 0.2);
+
+  --text_hover: #f15b22;
+
+  --mode_bg: rgb(77, 77, 77);
+
+  --profile_handle: blue; 
+
+  --team_title_color: #f3ca34;
+  --team_title_shadow: #2d2e32;
+  --team_i: white;
+  --team_i_hover: #f3ca34;
+
+  --nit_border_color: black;
+  --zh: #f15b22;
+  --zh_bg: black;
+
+  // --events_primary: #2454fb;
+  // --events_secondary: #fbc204;
+
+  --events_primary: #f15b22;
+  --events_secondary: #f3ca34;
+
+  --creations_shadow: rgba(0,0,0,0.2);
+
+  --black: black;
+}
+
+.dark_mode{
+  --primary: #f15b22;
+  
+  --text1: #f15b22;
+  --text2: white;
+  --text3: rgb(192, 192, 192);
+
+  --blob_border: #dee3fa;
+
+  --shadow1: rgba(132, 132, 132, 0.3);
+  --shadow2: rgba(150, 150, 150, 0.3);
+
+  --text_hover: #f3ca34;
+
+  --mode_bg: #dee3fa;
+
+  --profile_handle: #f15b22; 
+
+  --team_title_color: #f15b22;
+  --team_title_shadow: rgb(192, 192, 192);
+  --team_i: black;
+  --team_i_hover: #f15b22;
+
+  --nit_border_color: white;
+  --zh: #f15b22;
+  --zh_bg: white;
+
+  --creations_shadow: rgba(98, 98, 98, 0.2);
+}

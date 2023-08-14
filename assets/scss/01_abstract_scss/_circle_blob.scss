@@ -1,0 +1,21 @@
+.circle{
+  aspect-ratio: 1/1;
+  width: 15px;
+  border: none;
+  border-radius: 7.5px;
+  background-image: linear-gradient(#f15b22, #f3ca34);
+  position: absolute;
+  z-index: -1;
+  top: -20px;
+  left: -20px;
+  animation: blob ease-in-out 5s infinite;
+  transition: all 0.05s;
+}
+@keyframes blob
+{
+  0%{border-radius: 47% 53% 24% 80% / 70% 9% 91% 30%;}
+  25%{border-radius: 57% 44% 37% 88% / 48% 76% 27% 51%;}
+  50%{border-radius: 70% 46% 31% 100% / 32% 56% 56% 95%;}
+  75%{border-radius: 82% 85% 37% 65% / 75% 71% 91% 93% ;}
+  100%{border-radius: 47% 53% 24% 80% / 70% 9% 91% 30%;}
+}

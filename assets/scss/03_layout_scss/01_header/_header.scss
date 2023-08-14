@@ -1,0 +1,115 @@
+@use "../../01_abstract_scss/abstract";
+@use "../../01_abstract_scss/media_queries_mix" as mq;
+
+.nav_bar{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 2.4rem 3rem;
+  box-shadow: 0 0.1px 20px var(--shadow2);
+
+  @include mq.responsive('lg')
+  {
+    padding: 2.4rem 3.5rem;
+  }
+  @include mq.responsive('lg')
+  {
+    padding: 2.4rem 3.5rem;
+  }
+  @include mq.responsive('md')
+  {
+    padding: 2.4rem 2.5rem;
+  }
+  @include mq.responsive('sm')
+  {
+    padding: 2.4rem 2rem;
+  }
+  @include mq.responsive('xs')
+  {
+    padding: 2.4rem 1.5rem;
+  }
+
+  &__club_name{
+    font-family: 'Noto Sans Tamil', sans-serif;
+    font-size: 1.3rem;
+    font-weight: 600;
+    color: var(--text1);
+    cursor: pointer;
+    transition: opacity 0.3s, transform 0.3s;
+  }
+
+  &__desktop_menu{
+    display: flex;
+    align-items: center;
+    column-gap: 1.5rem;
+
+    @include mq.responsive('lg')
+    {
+      display: none;
+    }
+    @include mq.responsive('md')
+    {
+      display: none;
+    }
+    @include mq.responsive('sm')
+    {
+      display: none;
+    }
+    @include mq.responsive('xs')
+    {
+      display: none;
+    }
+    
+
+    .hover_styles{
+      font-family: 'Noto Sans Tamil', sans-serif;
+      font-size: 1.1rem;
+      font-weight: 500;
+      color: var(--text1);
+    }
+    .hover_styles:hover{
+      color: var(--text_hover);
+    }
+
+    &__home{
+      transition: color 0.2s, opacity 0.5s 1500ms, transform 0.5s 1500ms;
+    }
+    &__events{
+      transition: color 0.2s, opacity 0.5s 1200ms, transform 0.5s 1200ms;
+    }
+    &__creations{
+      transition: color 0.2s, opacity 0.5s 900ms, transform 0.5s 900ms;
+    }
+    &__team{
+      transition: color 0.2s, opacity 0.5s 600ms, transform 0.5s 600ms;
+    }
+    &__contact{
+      transition: color 0.2s, opacity 0.5s 300ms, transform 0.5s 300ms;
+    }
+    
+  }
+
+  &__mobile_menu{
+    display: none;
+    font-size: 1.5rem;
+    margin-top: 0.1rem;
+    cursor: pointer;
+
+    @include mq.responsive('lg')
+    {
+      display: block;
+    }
+    @include mq.responsive('md')
+    {
+      display: block;
+    }
+    @include mq.responsive('sm')
+    {
+      display: block;
+    }
+    @include mq.responsive('xs')
+    {
+      display: block;
+    }
+  }
+}

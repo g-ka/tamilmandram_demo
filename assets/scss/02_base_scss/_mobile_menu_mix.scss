@@ -1,0 +1,59 @@
+@use "../01_abstract_scss/abstract";
+
+// .mobile_menu > .close
+@mixin close()
+{
+  font-size: 2.5rem;
+  position: fixed;
+  top: -5px;
+  right: -5px;
+  pointer-events: none;
+  opacity: 0;
+  transition: all 1s;
+  z-index: 111;
+  color: red;
+}
+
+// .mobile_menu > .menu
+@mixin menu()
+{
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 100vh;
+  justify-content: center;
+  align-items: center;
+  background-color: black;
+  // color: white;
+  color: var(--primary);
+  row-gap: 2rem;
+  position: fixed;
+  top: 0;
+  left: 100vw;
+  z-index: 110;
+  transition: all 1s;
+}
+
+// .menu > .styles
+@mixin styles()
+{
+  font-size: 2rem;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 600;
+  letter-spacing: 0.2rem;
+  cursor: pointer;
+}
+
+// .menu > .styles:hover
+@mixin styles_hover()
+{
+  padding: 1rem 2rem;
+  background-image: linear-gradient(to right, var(--primary), var(--secondary));
+  color: var(--black);
+}
+
+// trasitions
+@mixin transition($delay)
+{
+  transition: opacity 0.3s $delay, transform 0.3s $delay, padding 0.2s, background-color 0.2s, color 0.2s;
+}
